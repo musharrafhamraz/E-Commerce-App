@@ -31,7 +31,6 @@ class LoginScreen extends StatelessWidget {
 
               // Divider
               TFormDivider(
-                dark: dark,
                 dividerText: TTexts.orSignInWith.capitalize!,
               ),
 
