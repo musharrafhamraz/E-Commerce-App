@@ -1,9 +1,10 @@
 import 'package:ecommerce/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
+import 'package:ecommerce/common/widgets/products_cart/product_cart/product_card_vertical.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/home_categories.dart';
-import 'package:ecommerce/common/widgets/products_cart/product_cart/product_card_vertical.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/promo_slider.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
       child: Column(
         children: [
@@ -79,10 +80,15 @@ class HomeScreen extends StatelessWidget {
                     TImages.banner3,
                   ],
                 ),
-
+                const SizedBox(
+                  height: TSizes.spaceBtwSections,
+                ),
                 // Popular Products
 
-                TProductsCardVertical(),
+                TGridLayout(
+                  itemCOunt: 6,
+                  itemBuilder: (_, index) => const TProductsCardVertical(),
+                )
               ],
             ),
           )
