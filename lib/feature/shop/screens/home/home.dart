@@ -1,15 +1,13 @@
 import 'package:ecommerce/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
-
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/home_categories.dart';
+import 'package:ecommerce/common/widgets/products_cart/product_cart/product_card_vertical.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/promo_slider.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
-
 import 'package:ecommerce/utils/constants/sizes.dart';
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,15 +64,25 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Image Slider
+
+          // Body
 
           Padding(
             padding: EdgeInsets.all(TSizes.defaultSpace),
-            child: TPromeSlider(
-              banners: [
-                TImages.banner1,
-                TImages.banner2,
-                TImages.banner3,
+            child: Column(
+              children: [
+                // Image Promo Slider
+                TPromeSlider(
+                  banners: [
+                    TImages.banner1,
+                    TImages.banner2,
+                    TImages.banner3,
+                  ],
+                ),
+
+                // Popular Products
+
+                TProductsCardVertical(),
               ],
             ),
           )
