@@ -4,7 +4,9 @@ import 'package:ecommerce/common/widgets/custom_shapes/containers/search_contain
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/feature/shop/screens/home/widgets/home_categories.dart';
+import 'package:ecommerce/feature/shop/screens/home/widgets/promo_slider.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
+import 'package:ecommerce/utils/constants/image_strings.dart';
 
 import 'package:ecommerce/utils/constants/sizes.dart';
 
@@ -61,6 +63,18 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+              ],
+            ),
+          ),
+          // Image Slider
+
+          Padding(
+            padding: EdgeInsets.all(TSizes.defaultSpace),
+            child: TPromeSlider(
+              banners: [
+                TImages.banner1,
+                TImages.banner2,
+                TImages.banner3,
               ],
             ),
           )
