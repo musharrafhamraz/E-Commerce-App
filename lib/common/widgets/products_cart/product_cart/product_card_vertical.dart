@@ -78,7 +78,7 @@ class TProductsCardVertical extends StatelessWidget {
               //Details
 
               Padding(
-                padding: EdgeInsets.only(left: TSizes.sm),
+                padding: const EdgeInsets.only(left: TSizes.sm),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -104,36 +104,40 @@ class TProductsCardVertical extends StatelessWidget {
                             color: TColors.primary, size: TSizes.iconXs)
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const TProductPriceText(
-                          price: '36.23',
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(TSizes.cardRadiusMd),
-                                bottomRight:
-                                    Radius.circular(TSizes.productImageRadius)),
-                          ),
-                          child: const SizedBox(
-                            width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: TColors.white,
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    )
                   ],
                 ),
               ),
+              const Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: TSizes.sm),
+                    child: TProductPriceText(
+                      price: '36.23',
+                    ),
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(TSizes.productImageRadius)),
+                    ),
+                    child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(
+                        child: Icon(
+                          Iconsax.add,
+                          color: TColors.white,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )
             ],
           )),
     );
