@@ -1,15 +1,12 @@
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/appbar/tabbar.dart';
+import 'package:ecommerce/common/widgets/categories/store_category.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
-
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products_cart/cart/cart_menu_cart.dart';
 import 'package:ecommerce/common/widgets/text/section_heading.dart';
-
 import 'package:ecommerce/feature/shop/screens/shop/widgets/t_brand_card.dart';
-import 'package:ecommerce/main.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
-
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
