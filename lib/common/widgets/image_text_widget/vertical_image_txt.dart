@@ -9,7 +9,7 @@ class TVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = TColors.white,
-    this.backgroundColor = TColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -33,8 +33,8 @@ class TVerticalImageText extends StatelessWidget {
               decoration: BoxDecoration(
                 color: backgroundColor ??
                     (THelperFunctions.isDarkMode(context)
-                        ? TColors.white
-                        : TColors.black),
+                        ? TColors.black
+                        : TColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
